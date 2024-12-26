@@ -62,12 +62,12 @@ class GildedRoseTest {
 
     @Test
     public void testThatQualityOfAnItemIsNeverOverFifty() {
-        Item randomItem = new Item("Aged Brie", 5, 50);
+        Item agedBrie = new Item("Aged Brie", 5, 50);
 
-        GildedRose gildedRose = new GildedRose(arrayWith(randomItem));
+        GildedRose gildedRose = new GildedRose(arrayWith(agedBrie));
         gildedRose.updateQuality();
 
-        assertEquals(randomItem.quality, 50);
+        assertEquals(agedBrie.quality, 50);
     }
 
     @Test

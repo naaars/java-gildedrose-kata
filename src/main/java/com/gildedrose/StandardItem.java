@@ -12,7 +12,7 @@ public class StandardItem extends UpdatableItem {
         decreaseSellIn();
         decreaseQuality();
 
-        if (item.sellIn < DOUBLE_QUALITY_DECREASE_SELL_IN_THRESHOLD) {
+        if (sellIn() < DOUBLE_QUALITY_DECREASE_SELL_IN_THRESHOLD) {
             decreaseQuality();
         }
     }

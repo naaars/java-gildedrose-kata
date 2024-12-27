@@ -15,20 +15,16 @@ public class BackstagePass extends UpdatableItem{
 
         increaseQuality();
 
-        if (item.sellIn < DOUBLE_QUALITY_INCREASE_SELL_IN_THRESHOLD) {
+        if (sellIn() < DOUBLE_QUALITY_INCREASE_SELL_IN_THRESHOLD) {
             increaseQuality();
         }
 
-        if (item.sellIn < TRIPLE_QUALITY_INCREASE_SELL_IN_THRESHOLD) {
+        if (sellIn() < TRIPLE_QUALITY_INCREASE_SELL_IN_THRESHOLD) {
             increaseQuality();
         }
 
-        if (item.sellIn < QUALITY_RESET_SELL_IN_THRESHOLD) {
+        if (sellIn() < QUALITY_RESET_SELL_IN_THRESHOLD) {
             resetQuality();
         }
-    }
-
-    private void resetQuality() {
-        item.quality = 0;
     }
 }
